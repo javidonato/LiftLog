@@ -23,11 +23,8 @@ enum AppSchema {
     }
 }
 
-#if DEBUG
 extension AppSchema {
-    /// Contenedor en memoria para previews de Xcode.
     static var preview: ModelContainer {
         try! makeContainer(inMemory: true)
     }
 }
-#endif
