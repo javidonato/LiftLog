@@ -16,18 +16,17 @@ enum AppSchema {
         let configuration = ModelConfiguration(
             schema: schema,
             isStoredInMemoryOnly: inMemory,
-            // Explícito: hoy es 100 % local. Para iCloud más adelante se cambia aquí.
             cloudKitDatabase: .none
         )
-        return try ModelContainer(for: schema, configurations: [configuration])
-    }
-}
 
-#if DEBUG
-extension AppSchema {
-    /// Contenedor en memoria para previews de Xcode.
+        return try ModelContainer(
+            for: schema,
+            configurations: [configuration]
+        )
+    }
+
+    /// Contenedor en memoria utilizado por la aplicación para previews y tests.
     static var preview: ModelContainer {
         try! makeContainer(inMemory: true)
     }
 }
-#endif
