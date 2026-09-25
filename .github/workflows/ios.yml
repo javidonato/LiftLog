@@ -26,6 +26,7 @@ jobs:
             -scheme LiftLog \
             -sdk iphonesimulator \
             -destination 'generic/platform=iOS Simulator' \
+            -configuration Debug \
             -derivedDataPath build/DerivedData \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
@@ -38,6 +39,7 @@ jobs:
             -scheme LiftLog \
             -sdk iphonesimulator \
             -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+            -configuration Debug \
             -derivedDataPath build/DerivedData \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
