@@ -21,7 +21,11 @@ jobs:
       - name: Build for iOS Simulator
         run: |
           xcodebuild \
+<<<<<<< HEAD
             -project LiftLog/LiftLog.xcodeproj \
+=======
+            -project LiftLog/LiftLog.xcodeproj
+>>>>>>> 3a874e5826a9629b0be0fd87ac65ee8779d43458
             -scheme LiftLog \
             -sdk iphonesimulator \
             -destination 'generic/platform=iOS Simulator' \
